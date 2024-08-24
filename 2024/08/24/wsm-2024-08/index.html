@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>wsm-2024年08月 | 云烟成雨</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+var toggle = document.querySelector('.darkmode-toggle');
+var html = document.querySelector('html');
+
+html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+
+toggle.addEventListener('click', () => {
+localStorage.dark = !(html.dataset.dark == 'true');
+html.dataset.dark = localStorage.dark;
+});</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">wsm-2024年08月</h1><a id="logo" href="/.">云烟成雨</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/rss/"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">wsm-2024年08月</h1><div class="post-meta">2024-08-24<span> | </span><span class="category"><a href="/categories/wsm/">wsm</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.3k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 4</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/2024/08/24/wsm-2024-08/#waline"><span class="waline-comment-count" id="/2024/08/24/wsm-2024-08/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%AC%A1%E8%BF%AD%E4%BB%A3%E8%BF%9B%E5%B1%95"><span class="toc-number">1.</span> <span class="toc-text">本次迭代进展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E8%AE%A1%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text">后续计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E9%A2%84%E8%A7%88"><span class="toc-number">3.</span> <span class="toc-text">功能预览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.</span> <span class="toc-text">结语</span></a></li></ol></div></div><div class="post-content"><h2 id="本次迭代进展"><a href="#本次迭代进展" class="headerlink" title="本次迭代进展"></a>本次迭代进展</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;写在8月末，在最近的开发工作中，wsm 在改进其核心功能方面取得了重大进展。值得注意的是，现在 wsm 已可以正常启动X11应用和 Wayland 应用。下一个关键步骤是完善 SSD UI 交互功能，以提供更完整和友好的用户体验。本次迭代主要包括以下内容：</p>
+<ul>
+<li>合成器基础功能的完善</li>
+<li>支持鼠标移动、resize 窗口（X11、Wayland）。</li>
+<li>支持 SSD 显示窗口图标和标题。</li>
+<li>添加窗口 resize 感应区域宽度可配置</li>
+<li>修复 CSD 窗口 resize 异常问题</li>
+<li>添加 output 与 udev_device的映射关系，方便背光调节功能集成到 wsm 中</li>
+<li>高级功能的 wsm_scene_rect、wsm_scene_image、wsm_scene_text 显示控件正在编写中</li>
+<li>修复 wsm_text_node、wsm_image_node 中一些bug</li>
+<li>迁移 wlroots scene 核心渲染控制到 wsm 中，方便颗粒化控制每个显示节点的渲染流程</li>
+</ul>
+<h2 id="后续计划"><a href="#后续计划" class="headerlink" title="后续计划"></a>后续计划</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;暂时计划将 wsm 常规交互功能完善，后续计划如下：</p>
+<ul>
+<li>SSD： 支持最小化、最大化、关闭功能。支持标题栏翻译</li>
+<li>scene：基于 wsm_scene 编写wsm_scene_rect、wsm_scene_image、wsm_scene_text高性能控件</li>
+<li>窗口录制和截图：能够录制窗口图像，包括标题栏，实现所见即所得的效果。</li>
+<li>主屏幕配置：多屏模式下支持设置主屏幕功能</li>
+<li>窗口和屏幕后处理特效：支持圆角、模糊、阴影和状态切换动画等。</li>
+<li>多工作区支持：支持多个工作区的管理功能，以 Wayland 协议方式支持客户端调用管理接口。</li>
+<li>窗口平铺功能：支持窗口在屏幕上的停靠布局，屏幕二分、三分、四分等。</li>
+<li>动画线支持：提供高效的GPU动画机制。</li>
+<li>屏幕亮度调节：支持屏幕背光调光功能。</li>
+<li>肌肉记忆：支持 wsm 作为唯一显示后端，记录输入、输出硬件相关的配置参数。</li>
+<li>屏幕水印：支持在合成器层面渲染屏幕水印节点。</li>
+<li>黑屏遮罩功能：以软件绘制的方式在黑屏幕显示区域</li>
+<li>统一调试机制：支持场景渲染、DRM 输出、窗口管理、设备输入等核心功能的调试协议。</li>
+<li>多DRM 平面支持：充分使用 DRM 显示资源，提升渲染性能。</li>
+</ul>
+<h2 id="功能预览"><a href="#功能预览" class="headerlink" title="功能预览"></a>功能预览</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;下图展示了在嵌套运行模式下，wsm 启动 VSCode (X11) 和 QtCreator 的工作快照。目前，wsm 已具备基本功能，但服务端的窗口装饰器仍缺少最小化、最大化和关闭的 UI 按钮。笔者已完成了后端的部分实现，接下来完善窗口装饰器 (SSD) 功能将是首要任务。<br><img src="/img/wsm-2024-08/wayland-qtcreator--X11-vscode.png" alt="1.1 wsm运行wayland应用qtcreator和X11应用code"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;wsm 项目已经进入了一个活跃的开发阶段。经过与 wlroots 社区的多次讨论，笔者最终选择了自定义渲染方式。虽然这一选择给后续的迭代带来了不小的挑战，但其优势在于可以全面定制渲染管线，从而大大提高开发的灵活性。在未来的开发计划中，笔者对 wsm 中的矩形（wsm_scene_rect）、图像（wsm_scene_image）、文本（wsm_scene_text）以及动画曲线功能充满期待，因为这些功能对 wsm 的未来扩展至关重要。与此同时，笔者也在积极开发 Lychee 桌面环境。目前开发工作是在 KDE 平台上进行的，但未来目标是在 Lychee 上实现自开发。经过多次验证，wsm 的性能已经优于 kwin_Wayland，因此切换到 Lychee 只是时间问题。最近，笔者深入思考了桌面环境的图形化设计，并总结出几个与合成器关联最紧密的要点：</p>
+<ul>
+<li>Wayland 合成器启动完成后通知桌面端进程。</li>
+<li>设置输入、输出的工作参数（wsm 将提供 Wayland 协议接口来设置和存储这些参数，以便任何客户端都能获取和修改）。</li>
+<li>窗口切换器（Window Switcher）：在 Lychee 的设计中，笔者将这一功能集成到桌面客户端，以实现与合成器的解耦，通过 Wayland 协议进行通信。</li>
+<li>工作区管理（Workspace Manager）：同样，在 Lychee 的设计中，这一功能也将在桌面客户端实现，并通过 Wayland 协议与合成器解耦。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;可能有读者会认为笔者的设计思路与主流做法有所不同，在此我想解释一下：wsm 项目的初衷并非仅服务于某一个操作系统或桌面环境，而是面向大众的。UI 样式并非是设计目标，更多考虑是性能高效、稳定统一。笔者致力于开发一个功能全面的系统，并提供参考桌面环境实现，使得大家可以在此基础上定制自己的风格。通过这种方式，Wayland 将逐步走向统一，从而让我们可以将更多的精力投入到驱动和系统层面的完善上。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;更多信息和详细文档可以访问 <a target="_blank" rel="noopener" href="https://github.com/zzxyb/wsm">wsm 的Github 页面</a>。</p>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css?v=1.0.0"><script type="text/javascript" src="/js/donate.js?v=1.0.0" successtext="复制成功！"></script><a class="pos-f tr3" id="github" href="https://github.com/zzxyb" target="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/AliPayQR.png"></li><li id="WeChat" qr="/img/WeChatQR.png"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="tags"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-Desktop-Environment/" rel="tag">linux Desktop Environment</a></li></ul></div><div class="post-nav"><a class="next" href="/2024/06/23/wsm-dev-advice/">wsm开发建议</a></div><div class="nofancybox" id="waline"></div><script src="//unpkg.com/@waline/client@v2/dist/waline.js"></script><link rel="stylesheet" type="text/css" href="//unpkg.com/@waline/client@v2/dist/waline.css"><script>let metaInfo = ['nick', 'mail', 'link']
+let requiredMeta = 'nick,mail'.split(',').filter(item => {
+  return metaInfo.indexOf(item) > -1
+})
+Waline.init({
+  el: '#waline',
+  comment: true,
+  serverURL: 'https://vercel-blog-r7nmuwo9l-zzxyb.vercel.app/?vercelToolbarCode=53PAdw9lorEf5yu',
+  pageSize: '30',
+  wordLimit: '500',
+  requiredMeta,
+  reaction: true,
+  comment: true,
+  pageview: true,
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://example.com"/></form></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="/img/avatar.jpeg"/></a><p>To be a useful man to society.</p><a class="info-icon" href="https://twitter.com/zzxyba" title="Twitter" target="_blank" style="margin-inline:5px"> <i class="fa fa-twitter-square" style="margin-inline:5px"></i></a><a class="info-icon" href="xiaoyaobing1994@gmail.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/zzxyb" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wlroots/">wlroots</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/wsm/">wsm</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/linux-Desktop-Environment/" style="font-size: 15px;">linux Desktop Environment</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2024/08/24/wsm-2024-08/">wsm-2024年08月</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/06/23/wsm-dev-advice/">wsm开发建议</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/06/23/wsm/">wsm简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/06/19/wlroots/">wlroots简介</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><div id="widget-waline-list"></div><script type="text/javascript" id="recent-comment" serverURL="https://vercel-blog-r7nmuwo9l-zzxyb.vercel.app/?vercelToolbarCode=53PAdw9lorEf5yu" count="5" src="/js/recent-comments.js?v=1.0.0" async="async"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 <a href="/." rel="nofollow">云烟成雨.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="复制成功！"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
